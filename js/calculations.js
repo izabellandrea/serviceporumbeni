@@ -2,6 +2,8 @@
 
 function calculate(){
 
+  var tva=21;
+
   var totalMatfTVA=0;
   var totalManfTVA=0;
   var totalMancuTVA=0;
@@ -11,30 +13,23 @@ function calculate(){
   var valTVA=0;
   var TOTAL=0;
   
-
-
   $('.invoicelist-body-mat tbody tr').each( function(){
     var row = $(this),
         MatCant = row.find('.MatCant input').val(),
         pfTVA = row.find('.pfTVA input').val();
     
         MatvalfTVA=MatCant*pfTVA;
-        MatvalcuTVA=MatvalfTVA*119/100;
+        MatvalcuTVA=MatvalfTVA+(MatvalfTVA*tva/100);
         
         row.find('.MatvalfTVA').text( MatvalfTVA.toFixed(2) );
         row.find('.MatvalcuTVA').text( MatvalcuTVA.toFixed(2) );   
-        
-        
-       
+      
         totalMatfTVA+=MatvalfTVA;
         totalMatcuTVA+=MatvalcuTVA;
-        
-
   });
   $('.invoicelist-body-man tbody tr').each( function(){
     var row = $(this),
       
-
         ManCant   = row.find('.ManCant input').val(),
         Norma=row.find('.Norma input').val(),
         Tarif=row.find('.Tarif input').val();
@@ -43,17 +38,13 @@ function calculate(){
         row.find('.TotalNorma').text( TotalNorma.toFixed(2) );
 
         ManvalfTVA=Tarif*TotalNorma;
-        ManvalcuTVA=ManvalfTVA*119/100;
+        ManvalcuTVA=ManvalfTVA+(ManvalfTVA*tva/100);
         
         row.find('.ManvalfTVA').text( ManvalfTVA.toFixed(2) );
         row.find('.ManvalcuTVA').text( ManvalcuTVA.toFixed(2) );
-
         
         totalManfTVA+=ManvalfTVA;
         totalMancuTVA+=ManvalcuTVA;
-    
-        
-
   });
 
   $('#totalMatfTVA').text(totalMatfTVA.toFixed(2)+" RON");
@@ -65,14 +56,11 @@ function calculate(){
 
   $('#totalfTVA').text(totalfTVA.toFixed(2)+" RON");
   
-  valTVA=((totalManfTVA+totalMatfTVA)*19)/100;
+  valTVA=((totalManfTVA+totalMatfTVA)*tva)/100;
   $('#valTVA').text(valTVA.toFixed(2)+" RON");
 
   TOTAL=totalfTVA+valTVA;
   $('#TOTAL').text(TOTAL.toFixed(2)+" RON");
-
-
- 
 }
 
 
@@ -127,9 +115,6 @@ $('body').on('click','.removeManRow',function(e){
     e.preventDefault();
     calculate();
   });
-
-
-  
 
 
 calculate();

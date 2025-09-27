@@ -31,27 +31,24 @@
 <body>
     
   <div class="sidenav" >  
-    <img class="logo" src="logo.jpg" alt="Logo"> 
-    
-      <a href="index.html"> <img src="house.svg" ><li>HOME</li> </a>
-     
-      <a href="Deviz.html"><img src="document.svg" ><li>DEVIZ</li></a>
-      <a href="comanda.html"><img src="document.svg" ><li>COMANDA</li></a>
-      <a href="#"><img src="gear.svg" ><li> SETTINGS</li></a>
-     
-    </div>
+    <img class="logo" src="img/logo.jpg" alt="Logo"> 
+    <a href="index.html"> <img src="img/house.svg" ><li>HOME</li> </a>
+    <a href="Deviz.html"><img src="img/document.svg" ><li>DEVIZ</li></a>
+    <a href="comanda.html"><img src="img/document.svg" ><li>COMANDA</li></a>
+    <a href="#"><img src="img/gear.svg" ><li> SETTINGS</li></a>
+  </div>
  
    
    <div class="page-container">
     <div class="hero-image">
-     <img class="hero" src ="banner.jpg" alt="banner">
+     <img class="hero" src ="img/banner.jpg" alt="banner">
     </div>
     <div class="documents">
          
     <div class="card card-comanda" style="width: 18rem;">
       <div class="card-top">
         <a href="comanda.html">
-          <img class="card-img-top" src="file.png" alt="Comanda">
+          <img class="card-img-top" src="img/file.png" alt="Comanda">
         </a></div>
         <div class="card-body">
          <a href="comanda.html"class="card-text">Comanda</a>
@@ -59,63 +56,55 @@
       </div>
       <div class="card card-deviz" style="width: 18rem;">
         <div class="card-top">
-        <a href="Deviz.html"><img class="card-img-top" src="file.png"  alt="Deviz"></a></div>
+        <a href="Deviz.html"><img class="card-img-top" src="img/file.png"  alt="Deviz"></a></div>
         <div class="card-body">
          <a href="Deviz.html"class="card-text">Deviz</a>
         </div>
       </div>
-        
    </div>
-
-  
-
   </div>
-   
-   
     <div class="right-sidenav" >  
       <div id="calendar"></div>
 
-<div id='formDiv'>
-  <fieldset style='padding:0 20px 20px 20px'>
-    <legend>
-      <h2> Add An Event </h2>
-    </legend>
-    <form name='myForm' onsubmit="myFunc()">
-      <table>
-        <tr>
-          <td>Name:</td>
-          <td><input type="text" name="eventName" id="eventName" required></td>
-        </tr>
-        <tr>
-          <td>Type:</td>
-          <td style="display: flex;">
-            <select class="selectMenu" id="eventType" name="eventType" onchange="displayCol()" required>
-            <option value="">Select One</option>
-            <option value="Service">Service</option>
-            <option value="Oljcsere">Olajcsere</option>
-            <option value="Gumicsere">Gumicsere</option>
-            <option value="Test">Test</option>
-            <option value="Diagnosztika">Diagnosztika</option>
-            </select>
-            <div id="eventColor"></div>
-          </td>
-        </tr>
-        <tr>
-          <td>Date:</td>
-          <td><input type="date" name="eventDate" id="eventDate" required></td>
-        </tr>
-        <tr>
-          <td><input type="submit" id="addEventBTN" value="Add Event"></td>
-          <td><button id="closeBTN" onclick="closeForm()" form="noForm">Close Window</button></td>
-        </tr>
-      </table>
-    </form>
-  </fieldset>
-</div>
-
-   </div>
-       
+      <div id='formDiv'>
+        <fieldset style='padding:0 20px 20px 20px'>
+          <legend>
+            <h2> Add An Event </h2>
+          </legend>
+          <form name='myForm' onsubmit="myFunc()">
+            <table>
+              <tr>
+                <td>Name:</td>
+                <td><input type="text" name="eventName" id="eventName" required></td>
+              </tr>
+              <tr>
+                <td>Type:</td>
+                <td style="display: flex;">
+                  <select class="selectMenu" id="eventType" name="eventType" onchange="displayCol()" required>
+                  <option value="">Select One</option>
+                  <option value="Service">Service</option>
+                  <option value="Oljcsere">Olajcsere</option>
+                  <option value="Gumicsere">Gumicsere</option>
+                  <option value="Test">Test</option>
+                  <option value="Diagnosztika">Diagnosztika</option>
+                  </select>
+                  <div id="eventColor"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Date:</td>
+                <td><input type="date" name="eventDate" id="eventDate" required></td>
+              </tr>
+              <tr>
+                <td><input type="submit" id="addEventBTN" value="Add Event"></td>
+                <td><button id="closeBTN" onclick="closeForm()" form="noForm">Close Window</button></td>
+              </tr>
+            </table>
+          </form>
+        </fieldset>
       </div>
+    </div>     
+  </div>
 
 
 

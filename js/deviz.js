@@ -23,7 +23,7 @@ function myFunction() {
             '    <header class="row">'+
  
             '  <div class="logoholder text-center" contenteditable>'+
-            '       <img src="logo.jpg">'+
+            '       <img src="img/logo.jpg">'+
             '     </div><!--.logoholder-->'+
                 
                 
